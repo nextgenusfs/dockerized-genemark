@@ -1,6 +1,6 @@
 FROM bitnami/minideb:bullseye
 
-RUN install_packages libyaml-perl libhash-merge-perl libparallel-forkmanager-perl libmce-perl libthread-queue-any-perl libmath-utils-perl
+RUN install_packages python3 libyaml-perl libhash-merge-perl libparallel-forkmanager-perl libmce-perl libthread-queue-any-perl libmath-utils-perl
 
 COPY ./gmes_linux_64_4.tar.gz /opt
 

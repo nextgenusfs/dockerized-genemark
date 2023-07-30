@@ -1,13 +1,13 @@
 ##### dockerized GeneMark ES/ET/EP
 
-This is a hacky way to run/install genemark with docker.  Why?  Well I develop on Mac OSX and GeneMark is no longer released for OSX, so this little repo will allow you to build a working GeneMark docker image and then "spoof" the `gmes_petap.pl` script so that you can put this in your PATH and it can be picked up by some other software, ie `funannotate`.
+This is a hacky way to run/install genemark with docker.  Why?  Well I develop on Mac OSX and GeneMark is no longer released for OSX, so this little repo will allow you to build a working GeneMark docker image and then "spoof" the `gmes_petap.pl` and `gmhmme3` scripts so that you can put this in your PATH and it can be picked up by some other software, ie `funannotate`.
 
 You will need to download 64-bit GeneMark-ETP along with the license key to the same directory that you clone this repo from http://topaz.gatech.edu/GeneMark/license_download.cgi. [GeneMark-ES/ET/EP+ ver 4.71_lic and LINUX 64 kernel 3.10 - 5 version].  Then from that location you should just be able run:
 ```
 docker build -t genemark .
 ```
 
-This command will copy genemark and install inside the docker image called `genemark`.  Then using the bash wrapper script `gmes_petap.pl` it will call genemark via docker, ie:
+This command will copy genemark and install inside the docker image called `genemark`.  Then using the bash wrapper scripts of `gmes_petap.pl` and `gmhmme3` will call the appropriate genemark execulatble via docker, ie:
 
 ```
 $ gmes_petap.pl
